@@ -1,0 +1,107 @@
+// SublimeLinter Settings - User
+{
+	"paths": {
+        "osx": ["/anaconda3/bin/"],
+        "linux": ["/anaconda3/bin/"]
+        
+    },
+    
+
+    "show_panel_on_save": "view",
+    "no_column_highlights_line": false,
+    "linters": {
+
+	    "flake8": {
+		        "@disable": false,
+		        "args": [],
+		        "builtins": "",
+		        "excludes": [],
+		        "ignore": "",
+		        "max-complexity": 10,
+		        "max-line-length": 80,
+		        "select": ""
+    	    	},
+    
+        "pylint": {
+                "@disable": false,
+                "args": [],
+                "builtins": "",
+                "excludes": [],
+                "ignore": "",
+                "max-complexity": 10,
+                "max-line-length": 80,
+                "select": ""
+                },
+        "pep8": {
+            "@disable": false,
+            "args": [],
+            "excludes": [],
+            "ignore": "E501,C0301,W0142,W0402,R0201,E1101,E1102,C0103,R0901,R0903,R0904,C1001,W0223,W0232,W0201,E1103,R0801,C0111",
+            "max-line-length": 100,
+            "select": ""
+            },
+
+
+
+
+
+},
+"gutter_theme": "Circle",
+"styles": [
+        {
+            // Used to determine the color. E.g. region.<colorish>, with one of
+            // redish, orangish, yellowish, greenish, bluish, purplish, pinkish.
+            "scope": "region.yellowish markup.warning.sublime_linter",
+
+            // The error type this style definition will match for.
+            // An array which can contain "warning" and/or "error".
+            // If omitted will match both.
+            "types": ["warning"]
+        },
+        {
+            // Determines, for overlapping errors, which one is visualised.
+            "priority": 1,
+
+            // The icon displayed in the gutter area
+            // - "circle", "dot" or "bookmark"
+            // - "none" to remove the icon
+            // - A path to an icon file like
+            //   "Packages/SublimeLinter/gutter-themes/Blueberry Cross/error.png"
+            // - One provided by a gutter theme (e.g. "warning" or "error").
+            //   In theme Default: warning, error, cog, x,
+            //   and diamond, heart, pointer, square, star, triangle, which all
+            //   also have an -outline variant.
+            "icon": "circle",
+
+            // The highlight style:
+            // - "none"
+            // - "fill", "outline",
+            // - "solid_underline", "squiggly_underline", "stippled_underline"
+            // The underline styles are replaced with outlines when there is
+            // whitespace in the problem region, because underlines aren't drawn
+            // on whitespace (ST issue #137).
+            "mark_style": "fill",
+
+            "scope": "region.redish markup.error.sublime_linter"
+        }
+    ],
+
+    // DEPRECATED: use the selector linter setting instead:
+    // http://www.sublimelinter.com/en/stable/linter_settings.html#selector
+    // Maps variant syntaxes to the syntax that you have a linter for.
+    // The syntax is the name of the syntax definition file, in lower case
+    // Run this in the console to find it: view.settings().get('syntax').lower()
+    "syntax_map": {
+        "html (django)": "html",
+        "html (rails)": "html",
+        "html 5": "html",
+        "javascript (babel)": "javascript",
+        "magicpython": "python",
+        "php": "html",
+        "python django": "python",
+        "pythonimproved": "python"
+    }
+
+
+
+}
